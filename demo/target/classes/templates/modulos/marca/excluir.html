@@ -1,0 +1,8 @@
+<div th:replace="~{layout/master :: layout (~{:: main})}"></div>
+   <h1>Excluir marca</h1>
+   <form method="post" th:action="@{/marca/delete/{id}(id=${marca.id})">
+      Deseja Realmente Excluir o marca
+      <span th:text="${marca.nome}">x</span>
+      <button class="form-control" type="submit">Confirmar</button>
+   </form>
+</div>

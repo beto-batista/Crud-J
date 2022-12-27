@@ -1,0 +1,8 @@
+<div th:replace="~{layout/master :: layout (~{:: main})}"></div>
+   <h1>Excluir cliente</h1>
+   <form method="post" th:action="@{/cliente/delete/{id}(id=${cliente.id})">
+      Deseja Realmente Excluir o cliente
+      <span th:text="${cliente.nome}">x</span>
+      <button class="form-control" type="submit">Confirmar</button>
+   </form>
+</div>

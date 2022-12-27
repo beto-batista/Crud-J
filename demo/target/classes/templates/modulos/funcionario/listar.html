@@ -1,0 +1,37 @@
+<div th:replace="~{layout/master :: layout (~{:: main})}">
+  <main>
+    <h1 style="text-align: center">LISTA DE FUNCIONARIOS</h1>
+    <table class="table table-light">
+      <tr style="text-align: center" class="table-success">
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Endereço</th>
+        <th>Cpf</th>
+        <th>Sexo</th>
+        <th>Opções</th>
+      </tr>
+
+      <tr style="text-align: center" th:each="funcionario : ${funcionarios}">
+        <td><span th:text="${funcionario.nome}"></span></td>
+        <td><span th:text="${funcionario.telefone}"></span></td>
+        <td><span th:text="${funcionario.endereco}"></span></td>
+        <td><span th:text="${funcionario.cpf}"></span></td>
+        <td><span th:text="${funcionario.sexo}"></span></td>
+        <td class="buttons">
+          <a
+            class="btn btn-primary"
+            type="button"
+            th:href="@{/funcionario/editar/{id}(id=${funcionario.id})}"
+            >Editar</a
+          >
+          <a
+            class="btn btn-danger"
+            type="button"
+            th:href="@{/funcionario/delete/{id}(id=${funcionario.id})}"
+            >Excluir</a
+          >
+        </td>
+      </tr>
+    </table>
+  </main>
+</div>

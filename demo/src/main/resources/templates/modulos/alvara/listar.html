@@ -1,0 +1,37 @@
+<div th:replace="~{layout/master :: layout (~{:: main})}">
+  <main>
+    <h1 style="text-align: center">LISTA DE ALVARAS</h1>
+    <table class="table table-light">
+      <tr style="text-align: center" class="table-success">
+        <th>Nome</th>
+        <th>Data</th>
+        <th>Número</th>
+        <th>Orgão</th>
+        <th>Valido</th>
+        <th>Opções</th>
+      </tr>
+
+      <tr style="text-align: center" th:each="alvara : ${alvaras}">
+        <td><span th:text="${alvara.nome}"></span></td>
+        <td><span th:text="${alvara.data}"></span></td>
+        <td><span th:text="${alvara.numero}"></span></td>
+        <td><span th:text="${alvara.orgao}"></span></td>
+        <td><span th:text="${alvara.valido}"></span></td>
+        <td class="buttons">
+          <a
+            class="btn btn-primary"
+            type="button"
+            th:href="@{/alvara/editar/{id}(id=${alvara.id})}"
+            >Editar</a
+          >
+          <a
+            class="btn btn-danger"
+            type="button"
+            th:href="@{/alvara/delete/{id}(id=${alvara.id})}"
+            >Excluir</a
+          >
+        </td>
+      </tr>
+    </table>
+  </main>
+</div>

@@ -1,0 +1,92 @@
+<div th:replace="~{layout/master :: layout (~{:: main})}">
+  <main>
+    <h1 style="text-align: center">ADICIONAR MARCA</h1>
+    <form
+      method="post"
+      action="#"
+      th:action="@{/marca/salvar}"
+      th:object="${marca}"
+    >
+      <div class="form-group">
+        <label for="nome" class="form-label">Nome</label>
+        <input
+          class="form-control"
+          type="text"
+          id="nome"
+          th:value="${nome}"
+          th:name="nome"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="cnpj" class="form-label">CNPJ</label>
+        <input
+          class="form-control"
+          type="text"
+          id="cnpj"
+          th:value="${cnpj}"
+          th:name="cnpj"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="fundacao" class="form-label">Fundção</label>
+        <input
+          class="form-control"
+          type="text"
+          id="fundacao"
+          th:value="${fundacao}"
+          th:name="fundacao"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="tipo" class="form-label">Tipo</label>
+        <input
+          class="form-control"
+          type="text"
+          id="tipo"
+          th:value="${tipo}"
+          th:name="tipo"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="dono" class="form-label">Dono</label>
+        <input
+          class="form-control"
+          type="text"
+          id="dono"
+          th:value="${dono}"
+          th:name="dono"
+        />
+      </div>
+
+      <!-- <div class="form-group">
+        <label for="preco" class="form-label">Preço</label>
+        <input
+          class="form-control"
+          type="text"
+          id="preco"
+          th:value="${preco}"
+          th:name="preco"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="quantidade" class="form-label">Quantidade</label>
+        <input
+          class="form-control"
+          type="text"
+          id="quantidade"
+          th:value="${quantidade}"
+          th:name="preco"
+        />
+      </div> -->
+
+      <div class="form-group">
+        <button class="form-control" type="submit">Salvar</button>
+      </div>
+    </form>
+  </main>
+</div>

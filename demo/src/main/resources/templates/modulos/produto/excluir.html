@@ -1,0 +1,10 @@
+<div th:replace="~{layout/master :: layout (~{:: main})}">
+  <main>
+    <h1>Excluir Produto</h1>
+    <form method="post" th:action="@{/produto/delete/{id}(id=${produto.id})">
+      Deseja Realmente Excluir o Produto
+      <span th:text="${produto.nome}">x</span>
+      <button class="form-control" type="submit">Confirmar</button>
+    </form>
+  </main>
+</div>

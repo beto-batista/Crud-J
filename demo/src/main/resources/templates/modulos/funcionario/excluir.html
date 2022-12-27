@@ -1,0 +1,8 @@
+<div th:replace="~{layout/master :: layout (~{:: main})}"></div>
+   <h1>Excluir funcionario</h1>
+   <form method="post" th:action="@{/funcionario/delete/{id}(id=${funcionario.id})">
+      Deseja Realmente Excluir o funcionario
+      <span th:text="${funcionario.nome}">x</span>
+      <button class="form-control" type="submit">Confirmar</button>
+   </form>
+</div>

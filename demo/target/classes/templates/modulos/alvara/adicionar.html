@@ -1,0 +1,70 @@
+<div th:replace="~{layout/master :: layout (~{:: main})}">
+  <main>
+    <h1 style="text-align: center">ADICIONAR ALVARA</h1>
+    <form
+      method="post"
+      action="#"
+      th:action="@{/alvara/salvar}"
+      th:object="${alvara}"
+    >
+      <div class="form-group">
+        <label for="nome" class="form-label">Nome</label>
+        <input
+          class="form-control"
+          type="text"
+          id="nome"
+          th:value="${nome}"
+          th:name="nome"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="data" class="form-label">Data</label>
+        <input
+          class="form-control"
+          type="text"
+          id="data"
+          th:value="${data}"
+          th:name="data"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="numero" class="form-label">Número</label>
+        <input
+          class="form-control"
+          type="text"
+          id="numero"
+          th:value="${numero}"
+          th:name="numero"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="orgao" class="form-label">Orgão</label>
+        <input
+          class="form-control"
+          type="text"
+          id="orgao"
+          th:value="${orgao}"
+          th:name="orgao"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="valido" class="form-label">Valido</label>
+        <input
+          class="form-control"
+          type="text"
+          id="valido"
+          th:value="${valido}"
+          th:name="valido"
+        />
+      </div>
+
+      <div class="form-group">
+        <button class="form-control" type="submit">Salvar</button>
+      </div>
+    </form>
+  </main>
+</div>

@@ -1,0 +1,8 @@
+<div th:replace="~{layout/master :: layout (~{:: main})}"></div>
+   <h1>Excluir Alvara</h1>
+   <form method="post" th:action="@{/alvara/delete/{id}(id=${alvara.id})">
+      Deseja Realmente Excluir o Alvara
+      <span th:text="${alvara.nome}">x</span>
+      <button class="form-control" type="submit">Confirmar</button>
+   </form>
+</div>
